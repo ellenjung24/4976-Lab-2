@@ -1,0 +1,28 @@
+@page
+@model Lab.Pages.UtilsModel
+@{
+    ViewData["Title"] = "Utils";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post">
+        <div>
+            @* <label asp-for="BirthYear" class="control-label"></label>
+            <input asp-for="BirthYear" class="form-control" /> *@
+            <p>Year:</p>
+            <input type="number" name="BirthYear">
+        </div>
+        <br>
+        <div>
+            <p>Your zodiac is @ViewBag.Animal</p>
+            <img src= @Model.ImagePath alt="Animal">
+        </div>
+        <div>
+            <input type="submit" value="Get Zodiac" id="zodiac">
+            <input type="reset" value="clear" >
+        </div>
+    </form>
+
+</div>
